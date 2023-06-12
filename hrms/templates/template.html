@@ -1,0 +1,20 @@
+<!-- template.html -->
+
+<form action="{% url 'employee-update' %}" method="POST">
+    {% csrf_token %}
+    {{ employee_form.as_p }}
+    <button type="submit">Update Employee</button>
+  </form>
+  
+  <form action="{% url 'paystub-create' %}" method="POST">
+    {% csrf_token %}
+    {{ paystub_form.as_p }}
+    <button type="submit">Create Pay Stub</button>
+  </form>
+  
+  <form action="{% url 'timeoff-request-create' %}" method="POST">
+    {% csrf_token %}
+    {{ timeoff_form.as_p }}
+    <button type="submit">Create Time Off Request</button>
+  </form>
+  
